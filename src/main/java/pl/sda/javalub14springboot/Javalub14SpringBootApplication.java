@@ -1,14 +1,18 @@
 package pl.sda.javalub14springboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import pl.sda.javalub14springboot.dice.DiceConfig;
 import pl.sda.javalub14springboot.dice.DiceService;
 import pl.sda.javalub14springboot.foobar.Foo;
+import pl.sda.javalub14springboot.foobar.FooBarProperties;
 import pl.sda.javalub14springboot.greeting.GreetingService;
 
+@EnableConfigurationProperties(FooBarProperties.class)
 @SpringBootApplication
 public class Javalub14SpringBootApplication implements CommandLineRunner {
 
@@ -28,7 +32,5 @@ public class Javalub14SpringBootApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		foo.fooBar();
-		greetingService.sayHello();
-		System.out.println(diceService.roll(10));
 	}
 }

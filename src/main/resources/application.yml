@@ -1,0 +1,10 @@
+spring:
+  main:
+    banner-mode: console
+
+pl:
+  sda:
+    javalub14:
+      foobar:
+        foo: Foo!
+        bar: Bar!
