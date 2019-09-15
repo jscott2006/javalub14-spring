@@ -31,6 +31,6 @@ public class Javalub14SpringBootApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		foo.fooBar();
+		greetingService.sayHello();
 	}
 }

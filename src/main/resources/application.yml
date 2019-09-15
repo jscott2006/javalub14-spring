@@ -5,6 +5,8 @@ spring:
 pl:
   sda:
     javalub14:
+      greeting:
+        name: Kamil
       foobar:
         foo: Foo!
         bar: Bar!
